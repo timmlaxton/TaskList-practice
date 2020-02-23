@@ -16,5 +16,18 @@ function addTask(e) {
     if(taskInput.value === ''); {
     alert ('Add a task')
 }
-    e.preventDefault();
+
+const li = document.createElement('li')
+li.className = 'collection-item';
+li.appendChild(document.createTextNode(taskInput.value));
+
+const link = document.createElement('a');
+link.className = "delete-item secondary-content";
+
+link.innerHTML = '<i class="fa fa-remove"></li>';
+li.appendChild(link);
+
+
+
+e.preventDefault();
 }
